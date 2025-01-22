@@ -13,22 +13,22 @@ public class BallController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            Debug.Log("User's Input: W");
+            Debug.Log(Vector2.up);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("User's Input: A");
+            Debug.Log(Vector2.left);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            Debug.Log("User's Input: S");
+            Debug.Log(Vector2.down);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("User's Input: D");
+            Debug.Log(Vector2.right);
         }
     }
 }
