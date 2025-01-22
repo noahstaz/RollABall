@@ -34,6 +34,12 @@ public class BallController : MonoBehaviour
             inputVector = Vector2.left;
         }
 
+        //make the ball jump only if touching the ground
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(sphereRigidbody.linearVelocity.y) < 0.01f)
+        {
+            sphereRigidbody.AddForce(Vector3.up * 4, ForceMode.Impulse);
+        }
+       
         Vector3 inputXZPlane = new Vector3(inputVector.x, 0, inputVector.y);
         sphereRigidbody.AddForce(inputXZPlane * ballSpeed);
         Debug.Log("Resultant Vector: " + inputVector);
